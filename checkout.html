@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17211e">
+  <title>Checkout — Phantoms Cart</title>
+  <link rel="icon" type="image/svg+xml" href="phantom-cart-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="checkout.css">
+  <script src="products.js" defer></script>
+  <script src="payment-qr-config.js" defer></script>
+  <script src="checkout.js" defer></script>
+</head>
+<body class="checkout-page">
+  <header class="checkout-header">
+    <a class="wordmark" href="index.html" aria-label="Phantoms Cart home"><img class="brand-logo" src="phantom-cart-logo.svg" alt="" aria-hidden="true">Phantoms Cart</a>
+    <span class="secure-note"><span aria-hidden="true">◇</span> Secure checkout</span>
+  </header>
+  <main class="checkout-main">
+    <a class="checkout-back" href="index.html#cart">← Back to cart</a>
+    <div class="checkout-heading">
+      <p class="eyebrow">ALMOST YOURS</p>
+      <h1>Checkout<span>.</span></h1>
+      <p>Review your finds, then scan to pay with any UPI app.</p>
+    </div>
+    <div class="checkout-layout" id="checkout-layout">
+      <section class="order-panel" aria-labelledby="order-title">
+        <div class="panel-heading"><h2 id="order-title">Your order</h2><span id="checkout-item-count">0 items</span></div>
+        <div class="checkout-items" id="checkout-items"></div>
+        <div class="checkout-total"><span>Total to pay</span><strong id="checkout-total">₹0</strong></div>
+        <p class="checkout-shipping-note"><span aria-hidden="true">↗</span> Free shipping is included on orders over ₹999.</p>
+      </section>
+      <section class="payment-panel" aria-labelledby="payment-title">
+        <div class="panel-heading"><h2 id="payment-title">Pay by UPI</h2><span class="upi-badge">UPI</span></div>
+        <div class="qr-frame" id="qr-frame">
+          <img id="payment-qr" alt="UPI payment QR code">
+          <div class="qr-placeholder" id="qr-placeholder">
+            <span class="qr-symbol" aria-hidden="true">▦</span>
+            <strong>Your payment QR goes here</strong>
+            <span>Add your QR image to this folder and set its filename in <code>payment-qr-config.js</code>.</span>
+          </div>
+        </div>
+        <p class="scan-label">Open your UPI app and scan this code</p>
+        <div class="upi-apps" aria-label="Supported payment apps"><span>GPay</span><span>PhonePe</span><span>Paytm</span><span>BHIM</span></div>
+        <div class="payment-notice"><span aria-hidden="true">ⓘ</span><p>Verify the amount and recipient name in your UPI app before sending payment.</p></div>
+      </section>
+    </div>
+    <section class="checkout-empty" id="checkout-empty" hidden>
+      <span aria-hidden="true">▱</span>
+      <h2>Your cart is empty</h2>
+      <p>Add something good before heading to checkout.</p>
+      <a href="index.html#products">Browse the finds <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+  <footer class="checkout-footer"><a href="index.html">Phantoms Cart</a><span>Good things for your everyday.</span></footer>
+</body>
+</html>

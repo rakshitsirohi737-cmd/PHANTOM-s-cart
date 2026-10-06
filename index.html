@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17211e">
+  <meta name="description" content="Good things, found here. Shop everyday favorites across tech, home, style, and outdoors.">
+  <title>Phantoms Cart — Good things, found here</title>
+  <link rel="icon" type="image/svg+xml" href="phantom-cart-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="products.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement"><span>THE GOOD FINDS EDIT</span><span>Fresh picks, better little moments <span aria-hidden="true">↗</span></span></div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Phantoms Cart home"><img class="brand-logo" src="phantom-cart-logo.svg" alt="" aria-hidden="true">Phantoms Cart</a>
+    <div class="delivery-note"><span class="delivery-pin" aria-hidden="true">⌖</span><span><small>Sending a little joy to</small><strong>Your doorstep</strong></span></div>
+    <form class="search-form" id="search-form" role="search">
+      <label class="sr-only" for="search-input">Search products</label>
+      <span class="search-icon" aria-hidden="true">⌕</span>
+      <input id="search-input" type="search" placeholder="Search the good stuff..." autocomplete="off">
+      <button class="search-button" type="submit">Search</button>
+    </form>
+    <div class="header-actions">
+      <button class="account-button" type="button" id="saved-button" aria-label="Show saved favorites"><span class="heart-icon" aria-hidden="true">♡</span><span>Saved</span></button>
+      <button class="cart-button" type="button" id="cart-open" aria-label="Open shopping cart"><span class="bag-icon" aria-hidden="true">▱</span><span>Cart</span><span class="cart-count" id="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <nav class="category-nav" aria-label="Shop categories">
+    <div class="nav-inner">
+      <a class="nav-deal" href="#products"><span aria-hidden="true">✳</span> Today's good stuff</a>
+      <span class="nav-divider" aria-hidden="true"></span>
+      <button class="nav-category is-active" type="button" data-category="all">Everything</button>
+      <button class="nav-category" type="button" data-category="Tech">Tech</button>
+      <button class="nav-category" type="button" data-category="Home">Home</button>
+      <button class="nav-category" type="button" data-category="Style">Style</button>
+      <button class="nav-category" type="button" data-category="Outdoors">Outdoors</button>
+      <a class="nav-gift" href="#products">Little gifts, big smiles <span aria-hidden="true">↗</span></a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-star" aria-hidden="true">✳</span> A VERY GOOD PLACE TO START</p>
+        <h1 id="hero-title">Good things,<br>found <span>here.</span></h1>
+        <p class="hero-description">The everyday upgrades, the just-because gifts, and the “where did you find that?” favorites.</p>
+        <a class="hero-cta" href="#products">Find your next favorite <span aria-hidden="true">↘</span></a>
+        <div class="hero-footnote"><span class="footnote-spark" aria-hidden="true">✳</span><span>Thoughtfully picked.<br>Ready for real life.</span></div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=85" alt="Friends browsing a colorful clothing shop">
+        <div class="hero-sticker"><span>THE</span><strong>GOOD<br>STUFF</strong><span>IS IN</span></div>
+        <div class="hero-image-caption"><span class="caption-dot"></span> A little something for every day</div>
+      </div>
+      <div class="hero-index" aria-hidden="true">01 <span></span> 04</div>
+    </section>
+
+    <section class="benefits" aria-label="Shopping benefits">
+      <div><span class="benefit-icon" aria-hidden="true">↗</span><span><strong>Free shipping</strong><small>On orders over ₹999</small></span></div>
+      <div><span class="benefit-icon" aria-hidden="true">◇</span><span><strong>Good picks only</strong><small>Chosen with care</small></span></div>
+      <div><span class="benefit-icon" aria-hidden="true">↺</span><span><strong>Easy returns</strong><small>30 days to decide</small></span></div>
+      <div class="benefit-note">Small joys.<br><span>Big main-character energy.</span></div>
+    </section>
+
+    <section class="products-section" id="products" aria-labelledby="products-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow section-eyebrow">A FEW THINGS WE LOVE</p>
+          <h2 id="products-title">Good finds, <span>right now.</span></h2>
+        </div>
+        <label class="sort-control" for="sort-select"><span>Sort by</span>
+          <select id="sort-select" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: low to high</option>
+            <option value="price-high">Price: high to low</option>
+            <option value="rating">Top rated</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="filter-row" role="group" aria-label="Filter products by category">
+        <button class="filter-chip is-active" type="button" data-category="all">Everything <span class="filter-count">08</span></button>
+        <button class="filter-chip" type="button" data-category="Tech">Tech</button>
+        <button class="filter-chip" type="button" data-category="Home">Home</button>
+        <button class="filter-chip" type="button" data-category="Style">Style</button>
+        <button class="filter-chip" type="button" data-category="Outdoors">Outdoors</button>
+        <span class="results-count" id="results-count" aria-live="polite"></span>
+      </div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span aria-hidden="true">⌕</span>
+        <h3>No good finds just yet</h3>
+        <p>Try another search or browse everything.</p>
+        <button type="button" id="clear-filters">Show me everything</button>
+      </div>
+      <div class="bottom-note"><span aria-hidden="true">✳</span> There’s always room for one more good thing.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="wordmark footer-wordmark" href="#top" aria-label="Phantoms Cart home"><img class="brand-logo" src="phantom-cart-logo.svg" alt="" aria-hidden="true">Phantoms Cart</a><span>Good things for your everyday.</span><a href="#top">Back to the good stuff ↑</a></footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="drawer-title" aria-modal="true" role="dialog" aria-hidden="true">
+    <div class="drawer-header"><div><p class="eyebrow">YOUR GOOD FINDS</p><h2 id="drawer-title">Your cart <span id="drawer-item-count">(0)</span></h2></div><button class="drawer-close" id="cart-close" type="button" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><span aria-hidden="true">▱</span><h3>It's a little empty in here.</h3><p>There are good things with your name on them.</p><button type="button" id="continue-shopping">Keep looking</button></div>
+    <div class="drawer-footer" id="drawer-footer" hidden><div class="subtotal-row"><span>Subtotal</span><strong id="cart-subtotal">₹0</strong></div><p>Shipping and taxes calculated at checkout.</p><button class="checkout-button" id="checkout-button" type="button">Continue to checkout <span aria-hidden="true">→</span></button></div>
+  </aside>
+</body>
+</html>

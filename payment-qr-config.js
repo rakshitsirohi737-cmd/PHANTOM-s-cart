@@ -1,0 +1,1 @@
+window.PHANTOMS_CART_PAYMENT_QR = "";
