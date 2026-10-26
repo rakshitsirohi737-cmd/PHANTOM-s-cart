@@ -43,6 +43,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .search-button:hover { background: #c7eb56; }
 .header-actions { display: flex; align-items: center; gap: 18px; }
 .account-button, .cart-button { position: relative; display: flex; align-items: center; gap: 7px; padding: 8px 0; border: 0; background: transparent; font-size: 11px; font-weight: 600; cursor: pointer; }
+.account-icon { font-size: 18px; line-height: 1; }
 .heart-icon { font-size: 21px; line-height: 1; }
 .bag-icon { font-size: 22px; line-height: 1; transform: rotate(180deg); }
 .cart-count { min-width: 17px; height: 17px; display: grid; place-items: center; border-radius: 50%; background: var(--orange); color: white; font-size: 9px; }
@@ -195,6 +196,7 @@ body.drawer-open { overflow: hidden; }
     .site-header { padding-top: 11px; padding-bottom: 0; }
     .header-actions { justify-self: end; gap: 10px; }
     .account-button, .cart-button { gap: 4px; font-size: 10px; }
+    .account-link > span:last-child { display: none; }
     .category-nav { overflow-x: auto; scrollbar-width: none; }
     .category-nav::-webkit-scrollbar { display: none; }
     .nav-inner { width: max-content; min-height: 41px; gap: 19px; padding: 0 16px; }
